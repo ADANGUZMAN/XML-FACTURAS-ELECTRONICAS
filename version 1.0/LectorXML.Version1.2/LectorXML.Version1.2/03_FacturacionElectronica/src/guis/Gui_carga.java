@@ -65,14 +65,14 @@ public class Gui_carga extends JFrame implements ActionListener{
 	 */
 	public Gui_carga() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 643, 471);
+		setBounds(110, 110, 653, 481);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new EmptyBorder(6, 6, 6, 6));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblArchivo = new JLabel("ARCHIVO:");
-		lblArchivo.setBounds(10, 11, 89, 14);
+		JLabel lblArchivo = new JLabel("FILE:");
+		lblArchivo.setBounds(11, 12, 90, 15);
 		contentPane.add(lblArchivo);
 
 		jtfPath = new JTextField();
@@ -80,19 +80,19 @@ public class Gui_carga extends JFrame implements ActionListener{
 		contentPane.add(jtfPath);
 		jtfPath.setColumns(10);
 
-		jbtnCargar = new JButton("CARGAR");
-		jbtnCargar.setBounds(516, 7, 89, 23);
+		jbtnCargar = new JButton("CARGAR ARCHIVO");
+		jbtnCargar.setBounds(517, 8, 90, 24);
 		contentPane.add(jbtnCargar);
-		jbtnCargar.setActionCommand("load");
+		jbtnCargar.setActionCommand("CARGAR");
 		jbtnCargar.addActionListener(this);
 
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Proveedor", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(20, 36, 164, 290);
+		panel.setBorder(new TitledBorder(null, "PROVEEDOR:", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBounds(21, 37, 165, 291);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
-		JLabel lblNombres = new JLabel("Nombres:");
+		JLabel lblNombres = new JLabel("NOMBRES:");
 		lblNombres.setBounds(10, 22, 46, 14);
 		panel.add(lblNombres);
 
@@ -102,7 +102,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		panel.add(pro_nombres);
 		pro_nombres.setColumns(10);
 
-		JLabel lblApellidos = new JLabel("Apellidos:");
+		JLabel lblApellidos = new JLabel("APELLIDOS");
 		lblApellidos.setBounds(10, 78, 46, 14);
 		panel.add(lblApellidos);
 
@@ -122,7 +122,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		panel.add(pro_ruc);
 		pro_ruc.setColumns(10);
 
-		JLabel lblDireccion = new JLabel("Direccion:");
+		JLabel lblDireccion = new JLabel("DIRECCION");
 		lblDireccion.setBounds(10, 190, 81, 14);
 		panel.add(lblDireccion);
 
@@ -132,7 +132,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		panel.add(pro_dir);
 		pro_dir.setColumns(10);
 
-		JLabel lblCiudad = new JLabel("Ciudad:");
+		JLabel lblCiudad = new JLabel("CIUDAD");
 		lblCiudad.setBounds(10, 238, 46, 14);
 		panel.add(lblCiudad);
 
@@ -143,7 +143,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		pro_ciudad.setColumns(10);
 
 		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new TitledBorder(null, "Cliente", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_1.setBorder(new TitledBorder(null, "CLIENTE", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_1.setBounds(211, 39, 183, 205);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
@@ -179,12 +179,12 @@ public class Gui_carga extends JFrame implements ActionListener{
 		panel_1.add(cli_apellidos);
 
 		JPanel panel_2 = new JPanel();
-		panel_2.setBorder(new TitledBorder(null, "Factura", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_2.setBorder(new TitledBorder(null, "FACTURA", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_2.setBounds(422, 39, 183, 382);
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 
-		JLabel lblFecha = new JLabel("fecha:");
+		JLabel lblFecha = new JLabel("FECHA");
 		lblFecha.setBounds(10, 22, 46, 14);
 		panel_2.add(lblFecha);
 
@@ -194,7 +194,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		fac_fecha.setBounds(10, 37, 163, 20);
 		panel_2.add(fac_fecha);
 
-		JLabel lblNroFactura = new JLabel("Nro FActura:");
+		JLabel lblNroFactura = new JLabel("NÚMERO FACTURA");
 		lblNroFactura.setBounds(10, 68, 101, 14);
 		panel_2.add(lblNroFactura);
 
@@ -204,7 +204,7 @@ public class Gui_carga extends JFrame implements ActionListener{
 		fac_numero.setBounds(10, 93, 163, 20);
 		panel_2.add(fac_numero);
 
-		JLabel lblCtaegoria = new JLabel("Ctaegoria:");
+		JLabel lblCtaegoria = new JLabel("CATEGORIA:");
 		lblCtaegoria.setBounds(10, 124, 89, 14);
 		panel_2.add(lblCtaegoria);
 
