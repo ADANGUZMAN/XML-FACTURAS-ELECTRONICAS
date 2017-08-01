@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+ <!DOCTYPE DocType [<!ENTITY name "Value">]>
+ <?Target Instruction?>
+ <!--Comment-->
+<Element Attribute="Attribute">
+ <Element>
+  Text &name;
+ </Element>
+ <![CDATA[CDATA Section]]>
+ <EmptyElement/>
+</Element>
