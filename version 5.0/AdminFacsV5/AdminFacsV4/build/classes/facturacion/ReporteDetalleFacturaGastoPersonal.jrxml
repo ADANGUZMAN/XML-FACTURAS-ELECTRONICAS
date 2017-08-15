@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoPages" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c26aebad-67fe-4416-b998-f3bf93530040">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="158"/>
+	<property name="ireport.y" value="53"/>
+	<parameter name="cedula" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="proveedor" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM `facturapersonal` where cod_cliente=$P{cedula} and Nombre_empleado=$P{proveedor} and Fecha_facturacion between $P{fecha1} and $P{fecha2}]]>
+	</queryString>
+	<field name="Nnm_factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_cliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_empleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_facturacion" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cod_formapago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_factura" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IVA" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alimentacion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salud" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="educacion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vestimenta" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vivienda" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="otros" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="511" y="0" width="83" height="20" uuid="331e166d-e47a-4cf8-8acd-5722be626f9a"/>
+				<textFieldExpression><![CDATA[$F{cod_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="0" width="61" height="20" uuid="b12e46ac-60cd-4dd5-b040-69432f2911bd"/>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="87" height="20" uuid="72953f84-0b72-4e64-a188-84dd1627b697"/>
+				<text><![CDATA[Num factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="0" width="84" height="20" uuid="9cac7881-3d6c-48a8-b1bf-76f93b3b3b48"/>
+				<text><![CDATA[Proveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="0" width="73" height="20" uuid="412da5c2-384e-456a-bc8c-9af18246f413"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="61" height="20" uuid="237819d5-cd50-4df0-add0-56e08b7f0aac"/>
+				<text><![CDATA[alimentacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="61" height="20" uuid="17f60567-6a3e-46f4-a33c-32ca593c6fb6"/>
+				<text><![CDATA[salud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="61" height="20" uuid="79eaf7fa-ef4b-471b-bba2-92fcd39188a1"/>
+				<text><![CDATA[educacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="61" height="20" uuid="dbb08486-3776-4018-a5e4-564fae3c1c91"/>
+				<text><![CDATA[vestimenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="61" height="20" uuid="35327031-c32c-4918-a64a-79e95c2e3b5a"/>
+				<text><![CDATA[vivienda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="0" width="61" height="20" uuid="6c640cdd-1ebf-4154-a426-9d7f5f1463fa"/>
+				<text><![CDATA[otros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="61" height="20" uuid="29abcddd-0e1a-4ee0-b2de-459fd13250ca"/>
+				<text><![CDATA[total_factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="0" width="61" height="20" uuid="69183272-09c8-4df4-a188-d67d6e8703f5"/>
+				<text><![CDATA[IVA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="87" height="20" uuid="060da2dc-5edf-476f-8f08-030a986c98fe"/>
+				<textFieldExpression><![CDATA[$F{Nnm_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="0" width="84" height="20" uuid="88d3653a-4a7f-4c45-bf55-6acb28627b51"/>
+				<textFieldExpression><![CDATA[$F{Nombre_empleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="0" width="73" height="20" uuid="ed8817b8-fa55-4c8e-b36a-1d82084e1f04"/>
+				<textFieldExpression><![CDATA[$F{Fecha_facturacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="61" height="20" uuid="6fd6b5b2-9531-4cf9-ab38-550ca30317e8"/>
+				<textFieldExpression><![CDATA[$F{total_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="671" y="0" width="61" height="20" uuid="721decd6-56f1-4e06-afe3-00c3266d682e"/>
+				<textFieldExpression><![CDATA[$F{IVA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="61" height="20" uuid="23a3be01-5812-4e15-b183-4a161321245b"/>
+				<textFieldExpression><![CDATA[$F{alimentacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="61" height="20" uuid="04e0425e-ef74-4620-a92d-d06f27abf9ac"/>
+				<textFieldExpression><![CDATA[$F{salud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="61" height="20" uuid="7a68218f-63e2-41f2-9fb5-1cbede62a719"/>
+				<textFieldExpression><![CDATA[$F{educacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="61" height="20" uuid="5b89e82c-0d92-47a1-a30b-5d41f32915e5"/>
+				<textFieldExpression><![CDATA[$F{vestimenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="61" height="20" uuid="2fa55921-1566-47b0-8506-801db51fa552"/>
+				<textFieldExpression><![CDATA[$F{vivienda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="61" height="20" uuid="442f85ea-17b7-49c1-9e5f-d316be0788b7"/>
+				<textFieldExpression><![CDATA[$F{otros}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

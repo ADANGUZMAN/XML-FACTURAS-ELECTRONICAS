@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="NoPages" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ae02a370-02c5-428a-b5fd-d351810bb809">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="73"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="cedula" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select monthname(fecha_facturacion) as mes, sum(alimentacion) as alimentacion,sum(vivienda)as vivienda, sum(vestimenta) as vestimenta, sum(Salud) as salud, sum(Educacion) as educacion,sum(Otros) as otros from facturapersonal group by monthname(fecha_facturacion)]]>
+	</queryString>
+	<field name="mes" class="java.lang.String"/>
+	<field name="alimentacion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vivienda" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vestimenta" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salud" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="educacion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="otros" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="228" y="20" width="427" height="39" uuid="46847397-a123-478b-be91-5ee0824101ec"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETALLE DE GASTOS PERSONALES POR MES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="698" y="0" width="100" height="20" uuid="7c6d241d-e99d-4916-a3f2-2d5ed3f2e2f4"/>
+				<textFieldExpression><![CDATA[$P{cedula}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="598" y="0" width="100" height="20" uuid="ebec1c8e-aa0d-4daa-a5af-7f835cec19a0"/>
+				<text><![CDATA[Usuario:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="114" y="0" width="114" height="20" uuid="3edcd726-e88d-42bf-97ff-a6ccb1f9f297"/>
+				<text><![CDATA[alimentacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="114" height="20" uuid="11bf21db-0554-4808-83ca-c8e98af6837b"/>
+				<text><![CDATA[mes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="114" height="20" uuid="088fc22f-8489-4689-ab41-a38b69c89eff"/>
+				<text><![CDATA[vivienda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="114" height="20" uuid="77253abc-31fc-40bd-8903-240466a0c1ec"/>
+				<text><![CDATA[vestimenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="0" width="114" height="20" uuid="43fdf842-7408-4ea2-873f-cb9c4ecdb0c3"/>
+				<text><![CDATA[salud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="570" y="0" width="114" height="20" uuid="e119169e-9ebf-4703-9a5d-fc172998341e"/>
+				<text><![CDATA[educacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="114" height="20" uuid="be3e2266-a902-48dd-8c52-8ab46387d404"/>
+				<text><![CDATA[otros]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="114" height="20" uuid="9fdc3808-a30b-4a32-9474-ff72d559d727"/>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="114" height="20" uuid="5a819b60-9a4b-487f-9dbe-f4edde0e3080"/>
+				<textFieldExpression><![CDATA[$F{vivienda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="114" height="20" uuid="0301ffb5-dc87-4b17-96cf-1aaac6fd595e"/>
+				<textFieldExpression><![CDATA[$F{vestimenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="114" height="20" uuid="be11c19f-b7ff-4e89-8abf-b2cb9492839f"/>
+				<textFieldExpression><![CDATA[$F{salud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="114" height="20" uuid="f33c6052-5469-43d3-bcd4-e7cb7e16fc41"/>
+				<textFieldExpression><![CDATA[$F{educacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="114" height="20" uuid="2653150c-82a1-409c-bb22-16af408d506c"/>
+				<textFieldExpression><![CDATA[$F{otros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="114" y="0" width="114" height="20" uuid="20383c9c-8797-4ae2-91df-e47c7b0461a3"/>
+				<textFieldExpression><![CDATA[$F{alimentacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
